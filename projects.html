@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مشاريعي | أكاديمية Eleven</title>
+  <meta name="description" content="استعرض المشاريع التي قمت بتطويرها">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Orbitron:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Cyber Background -->
+  <div class="cyber-bg">
+    <div class="grid-overlay"></div>
+    <div class="particles"></div>
+    <div class="scanner-line"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">ELEVEN ACADEMY</a>
+      <button class="menu-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+        <li><a href="programming.html" class="nav-link">لغات البرمجة</a></li>
+        <li><a href="hardware.html" class="nav-link">الهاردوير</a></li>
+        <li><a href="projects.html" class="nav-link active">مشاريعي</a></li>
+        <li><a href="specializations.html" class="nav-link">تخصصاتي</a></li>
+        <li><a href="learning-paths.html" class="nav-link">مسارات التعلم</a></li>
+        <li><a href="courses.html" class="nav-link">الكورسات</a></li>
+        <li><a href="questions.html" class="nav-link">الأسئلة</a></li>
+        <li><a href="about.html" class="nav-link">من أنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="section">
+      <div class="section-header fade-in">
+        <h1 class="section-title">مشاريعي 🎯</h1>
+        <p class="section-subtitle">استعرض المشاريع التي قمت بتطويرها وتعلم منها</p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- Calculator Project -->
+        <div class="project-card fade-in" onclick="openCalculator()">
+          <div class="project-image">🧮</div>
+          <div class="project-content">
+            <h3 class="project-title">حاسبة تفاعلية</h3>
+            <p class="project-desc">حاسبة بسيطة وأنيقة بتصميم عصري تدعم العمليات الحسابية الأساسية.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <span class="card-link">
+              <span>جرب المشروع</span>
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l-5 5m0 0l5 5m-5-5h12"/>
+              </svg>
+            </span>
+          </div>
+        </div>
+
+        <!-- Website Project -->
+        <div class="project-card fade-in">
+          <div class="project-image">🌐</div>
+          <div class="project-content">
+            <h3 class="project-title">موقع تعليمي</h3>
+            <p class="project-desc">هذا الموقع الذي تتصفحه الآن! منصة تعليمية متكاملة بتصميم سايبر.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <span class="card-link">
+              <span>أنت هنا!</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Quiz App -->
+        <div class="project-card fade-in">
+          <div class="project-image">❓</div>
+          <div class="project-content">
+            <h3 class="project-title">تطبيق الاختبارات</h3>
+            <p class="project-desc">نظام اختبارات تفاعلي مع تصحيح تلقائي وعرض النتائج.</p>
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">DOM</span>
+            </div>
+            <a href="questions.html" class="card-link">
+              <span>جرب الاختبار</span>
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l-5 5m0 0l5 5m-5-5h12"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Data Analysis -->
+        <div class="project-card fade-in">
+          <div class="project-image">📊</div>
+          <div class="project-content">
+            <h3 class="project-title">تحليل البيانات</h3>
+            <p class="project-desc">مشروع تحليل بيانات باستخدام Python و Pandas لاستخراج رؤى قيمة.</p>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Pandas</span>
+              <span class="project-tag">NumPy</span>
+            </div>
+            <span class="card-link">
+              <span>قريباً</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Portfolio -->
+        <div class="project-card fade-in">
+          <div class="project-image">💼</div>
+          <div class="project-content">
+            <h3 class="project-title">معرض أعمال شخصي</h3>
+            <p class="project-desc">صفحة شخصية لعرض المهارات والمشاريع بتصميم احترافي.</p>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">Animations</span>
+            </div>
+            <span class="card-link">
+              <span>قريباً</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Todo App -->
+        <div class="project-card fade-in">
+          <div class="project-image">✅</div>
+          <div class="project-content">
+            <h3 class="project-title">تطبيق المهام</h3>
+            <p class="project-desc">تطبيق لإدارة المهام اليومية مع إمكانية الإضافة والحذف والتعديل.</p>
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">LocalStorage</span>
+            </div>
+            <span class="card-link">
+              <span>قريباً</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Calculator Modal -->
+  <div class="modal-overlay" id="calculator-modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeCalculator()">&times;</button>
+      <h2 style="color: var(--neon-cyan); text-align: center; margin-bottom: 1.5rem;">🧮 الحاسبة</h2>
+      <div class="calculator">
+        <div class="calc-display">
+          <input type="text" id="calc-display" readonly value="0">
+        </div>
+        <div class="calc-buttons">
+          <button class="calc-btn clear" onclick="calcInput('C')">C</button>
+          <button class="calc-btn" onclick="calcInput('⌫')">⌫</button>
+          <button class="calc-btn operator" onclick="calcInput('%')">%</button>
+          <button class="calc-btn operator" onclick="calcInput('/')">÷</button>
+          
+          <button class="calc-btn" onclick="calcInput('7')">7</button>
+          <button class="calc-btn" onclick="calcInput('8')">8</button>
+          <button class="calc-btn" onclick="calcInput('9')">9</button>
+          <button class="calc-btn operator" onclick="calcInput('*')">×</button>
+          
+          <button class="calc-btn" onclick="calcInput('4')">4</button>
+          <button class="calc-btn" onclick="calcInput('5')">5</button>
+          <button class="calc-btn" onclick="calcInput('6')">6</button>
+          <button class="calc-btn operator" onclick="calcInput('-')">-</button>
+          
+          <button class="calc-btn" onclick="calcInput('1')">1</button>
+          <button class="calc-btn" onclick="calcInput('2')">2</button>
+          <button class="calc-btn" onclick="calcInput('3')">3</button>
+          <button class="calc-btn operator" onclick="calcInput('+')">+</button>
+          
+          <button class="calc-btn" onclick="calcInput('0')">0</button>
+          <button class="calc-btn" onclick="calcInput('.')">.</button>
+          <button class="calc-btn equals" onclick="calcInput('=')">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back Button -->
+  <button class="back-btn" aria-label="الرجوع">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l5-5m0 0l-5-5m5 5H3"/>
+    </svg>
+    <span>الرجوع إلى الوراء</span>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-scanner"></div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>أكاديمية Eleven</h3>
+        <p style="color: var(--text-secondary);">منصة تعليمية متكاملة لتعلم البرمجة والتقنية.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 أبو صابر (Eleven). جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

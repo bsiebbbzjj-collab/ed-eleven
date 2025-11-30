@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة التعريف الشخصي - أكاديمية البرمجة</title>
+    <meta name="description" content="صفحة ويب شخصية متكاملة لعرض السيرة الذاتية والمهارات والمشاريع">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #00f3ff;
+            --secondary: #ff00ff;
+            --accent: #00ff88;
+            --dark: #0a0a1a;
+            --darker: #050510;
+            --text: #e0e0ff;
+            --text-secondary: #a0a0c0;
+            --glass: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --neon-glow: 0 0 10px var(--primary), 0 0 20px var(--primary), 0 0 30px var(--primary);
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--darker);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Background Canvas */
+        #cyberCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            text-shadow: 0 0 5px rgba(0, 243, 255, 0.5);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-right: 3px solid var(--primary);
+            padding-right: 1rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(10, 10, 26, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            right: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 80px auto 0;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+
+        section:hover {
+            border-color: var(--primary);
+            box-shadow: var(--neon-glow);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: pulse 2s infinite;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--primary);
+            color: var(--dark);
+            box-shadow: var(--neon-glow);
+        }
+
+        .btn-accent {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-accent:hover {
+            background: var(--accent);
+            color: var(--dark);
+        }
+
+        /* Profile Styles */
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            box-shadow: var(--neon-glow);
+            background: linear-gradient(45deg, var(--dark), var(--darker));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary);
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .profile-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--glass-border);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .skill-category h3 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 0.5rem;
+        }
+
+        .skill-item {
+            margin-bottom: 1rem;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .skill-bar {
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-level {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 4px;
+            transition: width 1s ease-in-out;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--glass-border);
+            border-radius: 5px;
+            color: var(--text);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.2rem;
+        }
+
+        .social-link:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: var(--neon-glow);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 10, 26, 0.9);
+            border-top: 1px solid var(--glass-border);
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Utility Classes */
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .neon-text {
+            color: var(--primary);
+            text-shadow: var(--neon-glow);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(10, 10, 26, 0.95);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transition: var(--transition);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            main {
+                padding: 1rem;
+                margin-top: 70px;
+            }
+
+            section {
+                padding: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Accessibility */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background Canvas -->
+    <canvas id="cyberCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">أكاديمية البرمجة</a>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="programming.html">لغات البرمجة</a></li>
+                <li><a href="hardware.html">الهاردوير</a></li>
+                <li><a href="projects.html">المشاريع</a></li>
+                <li><a href="learning-paths.html">المسارات التعليمية</a></li>
+                <li><a href="about.html">من أنا</a></li>
+                <li><a href="questions.html">الأسئلة</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="floating">صفحة التعريف الشخصي</h1>
+            <p>صفحة ويب شخصية متكاملة لعرض سيرتك الذاتية ومهاراتك ومشاريعك بشكل احترافي</p>
+        </section>
+
+        <!-- Profile Header -->
+        <section>
+            <div class="profile-header">
+                <div class="profile-image">
+                    👨‍💻
+                </div>
+                <div class="profile-info">
+                    <h1>محمد صابر</h1>
+                    <h3>مطور ويب ومصمم واجهات مستخدم</h3>
+                    <p>مطور واجهات أمامية بخبرة تزيد عن 3 سنوات في تصميم وتطوير تطبيقات الويب التفاعلية. متخصص في HTML, CSS, JavaScript وتقنيات الويب الحديثة.</p>
+                    <div class="social-links">
+                        <a href="mailto:mohmedsaberooou@gmail.com" class="social-link">📧</a>
+                        <a href="https://www.facebook.com/share/1AQAeac5H7/" target="_blank" class="social-link">💼</a>
+                        <a href="https://wa.me/201127503669" target="_blank" class="social-link">📱</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-stats">
+                <div class="stat-card">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">سنوات خبرة</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">مشروع مكتمل</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">عميل راضي</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">تقنية متقنة</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section>
+            <h2>عنّي</h2>
+            <div class="profile-container">
+                <div style="flex: 1; min-width: 300px;">
+                    <h3>قصتي</h3>
+                    <p>بدأت رحلتي في البرمجة منذ 3 سنوات، حيث بدأت بتعلم أساسيات تطوير الويب ثم تخصصت في تطوير واجهات المستخدم. أحب تحويل الأفكار الإبداعية إلى واقع ملموس عبر الكود.</p>
+                    <p>أعمل حاليًا كمطور واجهات أمامية مستقبل، وأستمتع ببناء تجارب مستخدم استثنائية تجمع بين الجماليات والأداء المتميز.</p>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h3>اهتماماتي</h3>
+                    <ul style="list-style-type: none; padding-right: 1rem;">
+                        <li style="margin-bottom: 0.5rem;">🎨 تصميم تجربة المستخدم</li>
+                        <li style="margin-bottom: 0.5rem;">🚀 تطوير تطبيقات الويب الحديثة</li>
+                        <li style="margin-bottom: 0.5rem;">📱 البرمجة للموبايل</li>
+                        <li style="margin-bottom: 0.5rem;">🎵 الاستماع إلى الموسيقى</li>
+                        <li style="margin-bottom: 0.5rem;">📚 القراءة والتعلم المستمر</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h2>المهارات التقنية</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>تطوير الواجهات الأمامية</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML5</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>CSS3</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>React</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>تطوير الواجهات الخلفية</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Node.js</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>PHP</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>MySQL</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>أدوات وتقنيات</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Git</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Figma</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Webpack</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 70%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Docker</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section>
+            <h2>تواصل معي</h2>
+            <div class="profile-container">
+                <div class="contact-form" style="flex: 1; min-width: 300px;">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">إرسال الرسالة</button>
+                    </form>
+                </div>
+                <div style="flex: 1; min-width: 300px;">
+                    <h3>معلومات التواصل</h3>
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4>📧 البريد الإلكتروني</h4>
+                        <p>mohmedsaberooou@gmail.com</p>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4>📱 الواتساب</h4>
+                        <p>+20 112 750 3669</p>
+                    </div>
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4>💼 الفيسبوك</h4>
+                        <p>facebook.com/share/1AQAeac5H7/</p>
+                    </div>
+                    <div>
+                        <h4>⏰ أوقات العمل</h4>
+                        <p>الأحد - الخميس: 9 ص - 5 م</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Projects Button -->
+        <section class="text-center">
+            <h3>استكشف المزيد من المشاريع</h3>
+            <p>يمكنك العودة إلى صفحة المشاريع الرئيسية لاستكشاف المزيد من المشاريع البرمجية والتعلم من خلال التطبيق العملي.</p>
+            <a href="projects.html" class="btn btn-accent mt-2">العودة إلى المشاريع</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>© <span id="current-year"></span> محمد صابر. جميع الحقوق محفوظة.</p>
+            <div class="social-links">
+                <a href="about.html">من أنا</a>
+                <a href="https://www.facebook.com/share/1AQAeac5H7/" target="_blank">فيسبوك</a>
+                <a href="https://wa.me/201127503669" target="_blank">واتساب</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Current Year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile Navigation
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+
+        // Contact Form Handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('شكراً لتواصلك! سنرد عليك في أقرب وقت ممكن.');
+            this.reset();
+        });
+
+        // Animate skill bars on scroll
+        const animateSkillBars = () => {
+            const skillBars = document.querySelectorAll('.skill-level');
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        };
+
+        // Observe when skills section comes into view
+        const skillsSection = document.querySelector('.skills-container');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillBars();
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        if (skillsSection) {
+            observer.observe(skillsSection);
+        }
+
+        // Cyber Canvas Animation
+        const canvas = document.getElementById('cyberCanvas');
+        const ctx = canvas.getContext('2d');
+        let animationId;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.vx = (Math.random() - 0.5) * 2;
+                this.vy = (Math.random() - 0.5) * 2;
+                this.size = Math.random() * 2 + 1;
+                this.color = `hsl(${Math.random() * 60 + 180}, 100%, 70%)`;
+                this.alpha = Math.random() * 0.5 + 0.2;
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+
+                if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) {
+                    this.reset();
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.globalAlpha = this.alpha;
+                ctx.fillStyle = this.color;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        class CircuitLine {
+            constructor() {
+                this.points = [];
+                this.generatePoints();
+                this.progress = 0;
+                this.speed = Math.random() * 0.02 + 0.005;
+                this.color = `hsl(${Math.random() * 60 + 200}, 100%, 60%)`;
+            }
+
+            generatePoints() {
+                this.points = [];
+                const numPoints = 4 + Math.floor(Math.random() * 3);
+                
+                for (let i = 0; i < numPoints; i++) {
+                    this.points.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height
+                    });
+                }
+            }
+
+            update() {
+                this.progress += this.speed;
+                if (this.progress > 1) {
+                    this.progress = 0;
+                    this.generatePoints();
+                }
+            }
+
+            draw() {
+                ctx.save();
+                ctx.strokeStyle = this.color;
+                ctx.lineWidth = 1;
+                ctx.globalAlpha = 0.3;
+                
+                // Draw full line
+                ctx.beginPath();
+                ctx.moveTo(this.points[0].x, this.points[0].y);
+                for (let i = 1; i < this.points.length; i++) {
+                    ctx.lineTo(this.points[i].x, this.points[i].y);
+                }
+                ctx.stroke();
+
+                // Draw animated segment
+                const animatedLength = this.progress * (this.points.length - 1);
+                const segmentIndex = Math.floor(animatedLength);
+                const segmentProgress = animatedLength - segmentIndex;
+
+                if (segmentIndex < this.points.length - 1) {
+                    const start = this.points[segmentIndex];
+                    const end = this.points[segmentIndex + 1];
+                    
+                    const x = start.x + (end.x - start.x) * segmentProgress;
+                    const y = start.y + (end.y - start.y) * segmentProgress;
+                    
+                    ctx.strokeStyle = this.color;
+                    ctx.lineWidth = 2;
+                    ctx.globalAlpha = 0.8;
+                    ctx.beginPath();
+                    ctx.moveTo(start.x, start.y);
+                    ctx.lineTo(x, y);
+                    ctx.stroke();
+                    
+                    // Glow effect
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = this.color;
+                    ctx.beginPath();
+                    ctx.arc(x, y, 3, 0, Math.PI * 2);
+                    ctx.fillStyle = this.color;
+                    ctx.fill();
+                }
+                
+                ctx.restore();
+            }
+        }
+
+        const particles = Array.from({ length: 100 }, () => new Particle());
+        const circuits = Array.from({ length: 8 }, () => new CircuitLine());
+
+        function animate() {
+            ctx.fillStyle = 'rgba(5, 5, 16, 0.1)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Draw grid
+            ctx.strokeStyle = 'rgba(0, 243, 255, 0.1)';
+            ctx.lineWidth = 1;
+            const gridSize = 50;
+            
+            for (let x = 0; x < canvas.width; x += gridSize) {
+                ctx.beginPath();
+                ctx.moveTo(x, 0);
+                ctx.lineTo(x, canvas.height);
+                ctx.stroke();
+            }
+            
+            for (let y = 0; y < canvas.height; y += gridSize) {
+                ctx.beginPath();
+                ctx.moveTo(0, y);
+                ctx.lineTo(canvas.width, y);
+                ctx.stroke();
+            }
+
+            particles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            circuits.forEach(circuit => {
+                circuit.update();
+                circuit.draw();
+            });
+
+            animationId = requestAnimationFrame(animate);
+        }
+
+        // Start animation
+        animate();
+    </script>
+</body>
+</html>

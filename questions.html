@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اختبر معلوماتك | أكاديمية Eleven</title>
+  <meta name="description" content="25 سؤال تعليمي لاختبار معلوماتك في البرمجة والتقنية">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Orbitron:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Cyber Background -->
+  <div class="cyber-bg">
+    <div class="grid-overlay"></div>
+    <div class="particles"></div>
+    <div class="scanner-line"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">ELEVEN ACADEMY</a>
+      <button class="menu-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+        <li><a href="programming.html" class="nav-link">لغات البرمجة</a></li>
+        <li><a href="hardware.html" class="nav-link">الهاردوير</a></li>
+        <li><a href="projects.html" class="nav-link">مشاريعي</a></li>
+        <li><a href="specializations.html" class="nav-link">تخصصاتي</a></li>
+        <li><a href="learning-paths.html" class="nav-link">مسارات التعلم</a></li>
+        <li><a href="courses.html" class="nav-link">الكورسات</a></li>
+        <li><a href="questions.html" class="nav-link active">الأسئلة</a></li>
+        <li><a href="about.html" class="nav-link">من أنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="section">
+      <div class="section-header fade-in">
+        <h1 class="section-title">اختبر معلوماتك 🧠</h1>
+        <p class="section-subtitle">25 سؤال تعليمي متنوع في البرمجة والتقنية - اختر الإجابة الصحيحة!</p>
+      </div>
+
+      <div class="quiz-container">
+        <!-- Question 1 -->
+        <div class="quiz-question fade-in" data-question="1">
+          <span class="question-number">السؤال 1</span>
+          <p class="question-text">ما هي اللغة المستخدمة لتنسيق صفحات الويب؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(1, 0)">
+              <span class="option-letter">أ</span>
+              <span>HTML</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(1, 1)">
+              <span class="option-letter">ب</span>
+              <span>CSS</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(1, 2)">
+              <span class="option-letter">ج</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(1, 3)">
+              <span class="option-letter">د</span>
+              <span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="quiz-question fade-in" data-question="2">
+          <span class="question-number">السؤال 2</span>
+          <p class="question-text">ما هو المكون المسؤول عن تنفيذ العمليات الحسابية في الحاسوب؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(2, 0)">
+              <span class="option-letter">أ</span>
+              <span>RAM</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(2, 1)">
+              <span class="option-letter">ب</span>
+              <span>CPU</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(2, 2)">
+              <span class="option-letter">ج</span>
+              <span>GPU</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(2, 3)">
+              <span class="option-letter">د</span>
+              <span>SSD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="quiz-question fade-in" data-question="3">
+          <span class="question-number">السؤال 3</span>
+          <p class="question-text">أي لغة تُستخدم بشكل أساسي في الذكاء الاصطناعي؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(3, 0)">
+              <span class="option-letter">أ</span>
+              <span>HTML</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(3, 1)">
+              <span class="option-letter">ب</span>
+              <span>CSS</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(3, 2)">
+              <span class="option-letter">ج</span>
+              <span>Python</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(3, 3)">
+              <span class="option-letter">د</span>
+              <span>SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="quiz-question fade-in" data-question="4">
+          <span class="question-number">السؤال 4</span>
+          <p class="question-text">ما هو الاختصار الصحيح لـ "HyperText Markup Language"؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(4, 0)">
+              <span class="option-letter">أ</span>
+              <span>HTML</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(4, 1)">
+              <span class="option-letter">ب</span>
+              <span>HTTP</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(4, 2)">
+              <span class="option-letter">ج</span>
+              <span>HTTPS</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(4, 3)">
+              <span class="option-letter">د</span>
+              <span>HML</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="quiz-question fade-in" data-question="5">
+          <span class="question-number">السؤال 5</span>
+          <p class="question-text">ما هي وظيفة الـ RAM؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(5, 0)">
+              <span class="option-letter">أ</span>
+              <span>تخزين دائم للملفات</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(5, 1)">
+              <span class="option-letter">ب</span>
+              <span>معالجة الرسومات</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(5, 2)">
+              <span class="option-letter">ج</span>
+              <span>ذاكرة مؤقتة سريعة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(5, 3)">
+              <span class="option-letter">د</span>
+              <span>توفير الطاقة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="quiz-question fade-in" data-question="6">
+          <span class="question-number">السؤال 6</span>
+          <p class="question-text">ما هي لغة الاستعلام المستخدمة مع قواعد البيانات؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(6, 0)">
+              <span class="option-letter">أ</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(6, 1)">
+              <span class="option-letter">ب</span>
+              <span>SQL</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(6, 2)">
+              <span class="option-letter">ج</span>
+              <span>Ruby</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(6, 3)">
+              <span class="option-letter">د</span>
+              <span>PHP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="quiz-question fade-in" data-question="7">
+          <span class="question-number">السؤال 7</span>
+          <p class="question-text">ما الفرق بين SSD و HDD؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(7, 0)">
+              <span class="option-letter">أ</span>
+              <span>SSD أبطأ من HDD</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(7, 1)">
+              <span class="option-letter">ب</span>
+              <span>SSD أسرع من HDD</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(7, 2)">
+              <span class="option-letter">ج</span>
+              <span>لا فرق بينهما</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(7, 3)">
+              <span class="option-letter">د</span>
+              <span>HDD للصور فقط</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="quiz-question fade-in" data-question="8">
+          <span class="question-number">السؤال 8</span>
+          <p class="question-text">ما هو إطار العمل الشهير للغة Ruby؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(8, 0)">
+              <span class="option-letter">أ</span>
+              <span>Django</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(8, 1)">
+              <span class="option-letter">ب</span>
+              <span>React</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(8, 2)">
+              <span class="option-letter">ج</span>
+              <span>Rails</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(8, 3)">
+              <span class="option-letter">د</span>
+              <span>Laravel</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="quiz-question fade-in" data-question="9">
+          <span class="question-number">السؤال 9</span>
+          <p class="question-text">ما هو الـ GPU؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(9, 0)">
+              <span class="option-letter">أ</span>
+              <span>وحدة المعالجة المركزية</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(9, 1)">
+              <span class="option-letter">ب</span>
+              <span>وحدة معالجة الرسومات</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(9, 2)">
+              <span class="option-letter">ج</span>
+              <span>وحدة التخزين</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(9, 3)">
+              <span class="option-letter">د</span>
+              <span>وحدة الطاقة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="quiz-question fade-in" data-question="10">
+          <span class="question-number">السؤال 10</span>
+          <p class="question-text">أي من التالي يُعتبر لغة برمجة؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(10, 0)">
+              <span class="option-letter">أ</span>
+              <span>HTML</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(10, 1)">
+              <span class="option-letter">ب</span>
+              <span>CSS</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(10, 2)">
+              <span class="option-letter">ج</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(10, 3)">
+              <span class="option-letter">د</span>
+              <span>JSON</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="quiz-question fade-in" data-question="11">
+          <span class="question-number">السؤال 11</span>
+          <p class="question-text">ما هي وظيفة اللوحة الأم (Motherboard)؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(11, 0)">
+              <span class="option-letter">أ</span>
+              <span>تخزين البيانات</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(11, 1)">
+              <span class="option-letter">ب</span>
+              <span>ربط جميع المكونات</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(11, 2)">
+              <span class="option-letter">ج</span>
+              <span>عرض الصور</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(11, 3)">
+              <span class="option-letter">د</span>
+              <span>تبريد الجهاز</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="quiz-question fade-in" data-question="12">
+          <span class="question-number">السؤال 12</span>
+          <p class="question-text">ما هو Node.js؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(12, 0)">
+              <span class="option-letter">أ</span>
+              <span>لغة برمجة جديدة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(12, 1)">
+              <span class="option-letter">ب</span>
+              <span>بيئة تشغيل JavaScript على الخادم</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(12, 2)">
+              <span class="option-letter">ج</span>
+              <span>قاعدة بيانات</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(12, 3)">
+              <span class="option-letter">د</span>
+              <span>متصفح ويب</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 13 -->
+        <div class="quiz-question fade-in" data-question="13">
+          <span class="question-number">السؤال 13</span>
+          <p class="question-text">ما معنى CRUD في البرمجة؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(13, 0)">
+              <span class="option-letter">أ</span>
+              <span>Create, Read, Update, Delete</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(13, 1)">
+              <span class="option-letter">ب</span>
+              <span>Copy, Run, Upload, Download</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(13, 2)">
+              <span class="option-letter">ج</span>
+              <span>Code, Review, Use, Deploy</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(13, 3)">
+              <span class="option-letter">د</span>
+              <span>Connect, Receive, Update, Disconnect</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 14 -->
+        <div class="quiz-question fade-in" data-question="14">
+          <span class="question-number">السؤال 14</span>
+          <p class="question-text">ما هي وحدة قياس سرعة المعالج؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(14, 0)">
+              <span class="option-letter">أ</span>
+              <span>GB</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(14, 1)">
+              <span class="option-letter">ب</span>
+              <span>GHz</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(14, 2)">
+              <span class="option-letter">ج</span>
+              <span>MB</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(14, 3)">
+              <span class="option-letter">د</span>
+              <span>Watt</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 15 -->
+        <div class="quiz-question fade-in" data-question="15">
+          <span class="question-number">السؤال 15</span>
+          <p class="question-text">ما هو الـ API؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(15, 0)">
+              <span class="option-letter">أ</span>
+              <span>واجهة برمجة التطبيقات</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(15, 1)">
+              <span class="option-letter">ب</span>
+              <span>لغة برمجة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(15, 2)">
+              <span class="option-letter">ج</span>
+              <span>نظام تشغيل</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(15, 3)">
+              <span class="option-letter">د</span>
+              <span>قاعدة بيانات</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 16 -->
+        <div class="quiz-question fade-in" data-question="16">
+          <span class="question-number">السؤال 16</span>
+          <p class="question-text">ما هو Git؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(16, 0)">
+              <span class="option-letter">أ</span>
+              <span>نظام إدارة الإصدارات</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(16, 1)">
+              <span class="option-letter">ب</span>
+              <span>لغة برمجة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(16, 2)">
+              <span class="option-letter">ج</span>
+              <span>محرر نصوص</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(16, 3)">
+              <span class="option-letter">د</span>
+              <span>متصفح ويب</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 17 -->
+        <div class="quiz-question fade-in" data-question="17">
+          <span class="question-number">السؤال 17</span>
+          <p class="question-text">ما هو الفرق بين Front-end و Back-end؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(17, 0)">
+              <span class="option-letter">أ</span>
+              <span>Front-end للواجهة، Back-end للخادم</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(17, 1)">
+              <span class="option-letter">ب</span>
+              <span>لا فرق بينهما</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(17, 2)">
+              <span class="option-letter">ج</span>
+              <span>Front-end للخادم، Back-end للواجهة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(17, 3)">
+              <span class="option-letter">د</span>
+              <span>كلاهما للتصميم فقط</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 18 -->
+        <div class="quiz-question fade-in" data-question="18">
+          <span class="question-number">السؤال 18</span>
+          <p class="question-text">ما هي مكتبة NumPy؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(18, 0)">
+              <span class="option-letter">أ</span>
+              <span>مكتبة JavaScript للرسوم</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(18, 1)">
+              <span class="option-letter">ب</span>
+              <span>مكتبة Python للحسابات العددية</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(18, 2)">
+              <span class="option-letter">ج</span>
+              <span>قاعدة بيانات</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(18, 3)">
+              <span class="option-letter">د</span>
+              <span>نظام تشغيل</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 19 -->
+        <div class="quiz-question fade-in" data-question="19">
+          <span class="question-number">السؤال 19</span>
+          <p class="question-text">ما هو الـ DOM؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(19, 0)">
+              <span class="option-letter">أ</span>
+              <span>نموذج كائن المستند</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(19, 1)">
+              <span class="option-letter">ب</span>
+              <span>لغة برمجة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(19, 2)">
+              <span class="option-letter">ج</span>
+              <span>نوع من الذاكرة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(19, 3)">
+              <span class="option-letter">د</span>
+              <span>بروتوكول شبكة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 20 -->
+        <div class="quiz-question fade-in" data-question="20">
+          <span class="question-number">السؤال 20</span>
+          <p class="question-text">ما هو الـ Responsive Design؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(20, 0)">
+              <span class="option-letter">أ</span>
+              <span>تصميم يتكيف مع أحجام الشاشات</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(20, 1)">
+              <span class="option-letter">ب</span>
+              <span>تصميم ثابت</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(20, 2)">
+              <span class="option-letter">ج</span>
+              <span>تصميم للطباعة فقط</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(20, 3)">
+              <span class="option-letter">د</span>
+              <span>تصميم بدون ألوان</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 21 -->
+        <div class="quiz-question fade-in" data-question="21">
+          <span class="question-number">السؤال 21</span>
+          <p class="question-text">ما هو الـ Boolean؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(21, 0)">
+              <span class="option-letter">أ</span>
+              <span>نوع بيانات يحمل true أو false</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(21, 1)">
+              <span class="option-letter">ب</span>
+              <span>نوع من الأرقام</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(21, 2)">
+              <span class="option-letter">ج</span>
+              <span>نوع من النصوص</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(21, 3)">
+              <span class="option-letter">د</span>
+              <span>لغة برمجة</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 22 -->
+        <div class="quiz-question fade-in" data-question="22">
+          <span class="question-number">السؤال 22</span>
+          <p class="question-text">ما هو الـ Loop؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(22, 0)">
+              <span class="option-letter">أ</span>
+              <span>حلقة تكرارية</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(22, 1)">
+              <span class="option-letter">ب</span>
+              <span>شرط منطقي</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(22, 2)">
+              <span class="option-letter">ج</span>
+              <span>دالة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(22, 3)">
+              <span class="option-letter">د</span>
+              <span>متغير</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 23 -->
+        <div class="quiz-question fade-in" data-question="23">
+          <span class="question-number">السؤال 23</span>
+          <p class="question-text">ما هو الـ Debugging؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(23, 0)">
+              <span class="option-letter">أ</span>
+              <span>كتابة الكود</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(23, 1)">
+              <span class="option-letter">ب</span>
+              <span>إيجاد وإصلاح الأخطاء</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(23, 2)">
+              <span class="option-letter">ج</span>
+              <span>تصميم الواجهة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(23, 3)">
+              <span class="option-letter">د</span>
+              <span>نشر التطبيق</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 24 -->
+        <div class="quiz-question fade-in" data-question="24">
+          <span class="question-number">السؤال 24</span>
+          <p class="question-text">ما هو الـ Framework؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(24, 0)">
+              <span class="option-letter">أ</span>
+              <span>إطار عمل جاهز للتطوير</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(24, 1)">
+              <span class="option-letter">ب</span>
+              <span>لغة برمجة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(24, 2)">
+              <span class="option-letter">ج</span>
+              <span>نظام تشغيل</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(24, 3)">
+              <span class="option-letter">د</span>
+              <span>قاعدة بيانات</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question 25 -->
+        <div class="quiz-question fade-in" data-question="25">
+          <span class="question-number">السؤال 25</span>
+          <p class="question-text">ما هو الـ Algorithm؟</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="selectOption(25, 0)">
+              <span class="option-letter">أ</span>
+              <span>خطوات منظمة لحل مشكلة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(25, 1)">
+              <span class="option-letter">ب</span>
+              <span>نوع من البيانات</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(25, 2)">
+              <span class="option-letter">ج</span>
+              <span>لغة برمجة</span>
+            </div>
+            <div class="quiz-option" onclick="selectOption(25, 3)">
+              <span class="option-letter">د</span>
+              <span>جهاز حاسوب</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="text-align: center; margin-top: 2rem;">
+          <button class="btn btn-primary" onclick="submitQuiz()" style="font-size: 1.2rem; padding: 1.2rem 3rem;">
+            📝 تسليم الإجابات
+          </button>
+        </div>
+
+        <!-- Result -->
+        <div id="quiz-result" class="quiz-result" style="display: none;"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back Button -->
+  <button class="back-btn" aria-label="الرجوع">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l5-5m0 0l-5-5m5 5H3"/>
+    </svg>
+    <span>الرجوع إلى الوراء</span>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-scanner"></div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>أكاديمية Eleven</h3>
+        <p style="color: var(--text-secondary);">منصة تعليمية متكاملة لتعلم البرمجة والتقنية.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 أبو صابر (Eleven). جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Set correct answers
+    correctAnswers = {
+      1: 1,  // CSS
+      2: 1,  // CPU
+      3: 2,  // Python
+      4: 0,  // HTML
+      5: 2,  // ذاكرة مؤقتة
+      6: 1,  // SQL
+      7: 1,  // SSD أسرع
+      8: 2,  // Rails
+      9: 1,  // وحدة معالجة الرسومات
+      10: 2, // JavaScript
+      11: 1, // ربط المكونات
+      12: 1, // بيئة تشغيل
+      13: 0, // CRUD
+      14: 1, // GHz
+      15: 0, // API
+      16: 0, // Git
+      17: 0, // Front/Back
+      18: 1, // NumPy
+      19: 0, // DOM
+      20: 0, // Responsive
+      21: 0, // Boolean
+      22: 0, // Loop
+      23: 1, // Debugging
+      24: 0, // Framework
+      25: 0  // Algorithm
+    };
+  </script>
+</body>
+</html>

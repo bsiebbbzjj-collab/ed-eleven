@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الأسئلة الشائعة | أكاديمية Eleven</title>
+  <meta name="description" content="إجابات على الأسئلة الشائعة حول البرمجة والتعلم">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Orbitron:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Cyber Background -->
+  <div class="cyber-bg">
+    <div class="grid-overlay"></div>
+    <div class="particles"></div>
+    <div class="scanner-line"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">ELEVEN ACADEMY</a>
+      <button class="menu-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+        <li><a href="programming.html" class="nav-link">لغات البرمجة</a></li>
+        <li><a href="hardware.html" class="nav-link">الهاردوير</a></li>
+        <li><a href="projects.html" class="nav-link">مشاريعي</a></li>
+        <li><a href="specializations.html" class="nav-link">تخصصاتي</a></li>
+        <li><a href="learning-paths.html" class="nav-link">مسارات التعلم</a></li>
+        <li><a href="courses.html" class="nav-link">الكورسات</a></li>
+        <li><a href="questions.html" class="nav-link">الأسئلة</a></li>
+        <li><a href="about.html" class="nav-link">من أنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="section">
+      <div class="section-header fade-in">
+        <h1 class="section-title">الأسئلة الشائعة</h1>
+        <p class="section-subtitle">إجابات على أكثر الأسئلة شيوعاً حول تعلم البرمجة</p>
+      </div>
+
+      <div class="faq-container" style="max-width: 900px; margin: 0 auto;">
+        <!-- FAQ 1 -->
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>كم من الوقت أحتاج لتعلم البرمجة؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>يعتمد ذلك على أهدافك ومقدار الوقت الذي تخصصه يومياً. بشكل عام، يمكنك تعلم الأساسيات في 3-6 أشهر بمعدل ساعة أو ساعتين يومياً. لكن البرمجة رحلة مستمرة من التعلم والتطوير.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>ما هي أفضل لغة برمجة للمبتدئين؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Python تعتبر من أفضل اللغات للمبتدئين لأنها سهلة القراءة والكتابة. إذا كنت مهتماً بتطوير الويب، فابدأ بـ HTML و CSS ثم JavaScript. المهم أن تبدأ ولا تقلق كثيراً حول اللغة "المثالية".</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>هل أحتاج شهادة جامعية للعمل كمبرمج؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>لا، الكثير من المبرمجين الناجحين تعلموا ذاتياً. الشركات تهتم بمهاراتك ومشاريعك أكثر من الشهادات. ركز على بناء محفظة مشاريع قوية (Portfolio) وتعلم المهارات المطلوبة في سوق العمل.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>هل يمكنني تعلم البرمجة مجاناً؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>نعم! هناك موارد مجانية ممتازة مثل freeCodeCamp، Khan Academy، YouTube، وتوثيقات اللغات الرسمية. الاستثمار الحقيقي هو وقتك وجهدك، وليس المال.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>كيف أتعامل مع الأخطاء البرمجية؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>الأخطاء جزء طبيعي من البرمجة! اقرأ رسالة الخطأ بتمعن، استخدم Google للبحث عن الحل، جرب Stack Overflow، وتعلم استخدام أدوات تصحيح الأخطاء (Debugging). مع الوقت ستصبح أفضل في حل المشكلات.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>ما الفرق بين Front-end و Back-end؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Front-end هو ما يراه المستخدم (الواجهة، التصميم، التفاعل) ويستخدم HTML, CSS, JavaScript. Back-end هو ما يحدث خلف الكواليس (قواعد البيانات، الخوادم، المنطق) ويستخدم لغات مثل Python, PHP, Node.js.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 7 -->
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>هل أحتاج رياضيات قوية للبرمجة؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>لمعظم أنواع البرمجة، تحتاج فقط المنطق الأساسي والرياضيات البسيطة. لكن بعض المجالات مثل الذكاء الاصطناعي والألعاب تتطلب رياضيات متقدمة. لا تدع الرياضيات تكون عائقاً أمام البدء!</p>
+          </div>
+        </div>
+
+        <!-- FAQ 8 -->
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>كيف أبني مشروعي الأول؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>ابدأ بمشروع بسيط مثل آلة حاسبة، قائمة مهام، أو صفحة شخصية. قسّم المشروع لمهام صغيرة، ابحث عن حلول للمشاكل التي تواجهها، ولا تخف من الأخطاء. كل مشروع تبنيه يزيد من خبرتك.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 9 -->
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>ما هو Git ولماذا أحتاجه؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Git هو نظام للتحكم بالإصدارات يتيح لك تتبع التغييرات في كودك، التعاون مع الآخرين، والرجوع لإصدارات سابقة. GitHub هو منصة لاستضافة مشاريعك. تعلم Git أساسي لأي مبرمج.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 10 -->
+        <div class="faq-item fade-in">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>كيف أحافظ على حماسي للتعلم؟</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>حدد أهدافاً واضحة، ابنِ مشاريع تهمك شخصياً، انضم لمجتمعات المبرمجين، احتفل بإنجازاتك الصغيرة، وتذكر أن كل مبرمج محترف كان يوماً مبتدئاً مثلك. الاستمرارية أهم من الكمال!</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="glass-panel fade-in" style="margin-top: 4rem; text-align: center;">
+        <h2 style="color: var(--neon-cyan); margin-bottom: 1.5rem;">لديك سؤال آخر؟</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 2rem;">تواصل معي عبر وسائل التواصل الاجتماعي وسأسعد بمساعدتك!</p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a href="https://facebook.com" target="_blank" class="btn btn-primary">Facebook</a>
+          <a href="https://wa.me/" target="_blank" class="btn btn-secondary">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back Button -->
+  <button class="back-btn" aria-label="الرجوع">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l5-5m0 0l-5-5m5 5H3"/>
+    </svg>
+    <span>الرجوع إلى الوراء</span>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-scanner"></div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>أكاديمية Eleven</h3>
+        <p style="color: var(--text-secondary);">منصة تعليمية متكاملة لتعلم البرمجة والتقنية.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 أبو صابر (Eleven). جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function toggleFaq(button) {
+      const item = button.parentElement;
+      const isOpen = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(faq => {
+        faq.classList.remove('active');
+        faq.querySelector('.faq-icon').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('active');
+        button.querySelector('.faq-icon').textContent = '−';
+      }
+    }
+  </script>
+</body>
+</html>

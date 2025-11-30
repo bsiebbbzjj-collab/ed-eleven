@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لغات البرمجة | أكاديمية Eleven</title>
+  <meta name="description" content="تعلم أهم لغات البرمجة مع شرح تفصيلي باللغة العربية">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Orbitron:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Cyber Background -->
+  <div class="cyber-bg">
+    <div class="grid-overlay"></div>
+    <div class="particles"></div>
+    <div class="scanner-line"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">ELEVEN ACADEMY</a>
+      <button class="menu-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+        <li><a href="programming.html" class="nav-link active">لغات البرمجة</a></li>
+        <li><a href="hardware.html" class="nav-link">الهاردوير</a></li>
+        <li><a href="projects.html" class="nav-link">مشاريعي</a></li>
+        <li><a href="specializations.html" class="nav-link">تخصصاتي</a></li>
+        <li><a href="learning-paths.html" class="nav-link">مسارات التعلم</a></li>
+        <li><a href="courses.html" class="nav-link">الكورسات</a></li>
+        <li><a href="questions.html" class="nav-link">الأسئلة</a></li>
+        <li><a href="about.html" class="nav-link">من أنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="section">
+      <div class="section-header fade-in">
+        <h1 class="section-title">لغات البرمجة</h1>
+        <p class="section-subtitle">اكتشف أهم لغات البرمجة وتعلم كيفية استخدامها في بناء تطبيقات حقيقية</p>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="glass-panel fade-in" style="margin-bottom: 3rem;" id="javascript">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+          <div class="card-icon" style="background: linear-gradient(135deg, #f7df1e, #e8c900);">JS</div>
+          <h2 style="color: var(--neon-cyan);">JavaScript</h2>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">📖 ما هي JavaScript؟</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 2;">
+          JavaScript هي لغة برمجة ديناميكية عالية المستوى، وهي واحدة من أهم لغات الويب. 
+          تُستخدم لإضافة التفاعلية والحيوية لصفحات الويب، ويمكنها العمل على المتصفح (Front-end) 
+          والخادم (Back-end) باستخدام Node.js. تعتبر من أكثر اللغات طلباً في سوق العمل.
+        </p>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">🎯 استخدامات JavaScript</h3>
+        <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• تطوير واجهات المستخدم التفاعلية</li>
+          <li style="margin-bottom: 0.5rem;">• بناء تطبيقات الويب الكاملة (Full-Stack)</li>
+          <li style="margin-bottom: 0.5rem;">• تطوير تطبيقات الموبايل (React Native)</li>
+          <li style="margin-bottom: 0.5rem;">• برمجة الألعاب البسيطة</li>
+          <li style="margin-bottom: 0.5rem;">• أتمتة المهام والسكربتات</li>
+        </ul>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">⭐ مميزات اللغة</h3>
+        <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• سهلة التعلم للمبتدئين</li>
+          <li style="margin-bottom: 0.5rem;">• تعمل في جميع المتصفحات</li>
+          <li style="margin-bottom: 0.5rem;">• مجتمع ضخم ومكتبات وفيرة</li>
+          <li style="margin-bottom: 0.5rem;">• مرنة ومتعددة الاستخدامات</li>
+        </ul>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💻 مثال عملي</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-dot red"></span>
+            <span class="code-dot yellow"></span>
+            <span class="code-dot green"></span>
+            <span style="margin-right: auto; color: var(--text-muted);">script.js</span>
+          </div>
+          <pre><code>// تحية المستخدم
+function greetUser(name) {
+  const hour = new Date().getHours();
+  let greeting;
+  
+  if (hour < 12) {
+    greeting = "صباح الخير";
+  } else if (hour < 18) {
+    greeting = "مساء الخير";
+  } else {
+    greeting = "مساء النور";
+  }
+  
+  return `${greeting}، ${name}! 👋`;
+}
+
+console.log(greetUser("أحمد"));
+// النتيجة: صباح الخير، أحمد! 👋</code></pre>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💡 نصائح للتعلم</h3>
+        <ul style="color: var(--text-secondary); padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• ابدأ بالأساسيات: المتغيرات، الدوال، الشروط</li>
+          <li style="margin-bottom: 0.5rem;">• تعلم التعامل مع DOM</li>
+          <li style="margin-bottom: 0.5rem;">• مارس بناء مشاريع صغيرة</li>
+          <li style="margin-bottom: 0.5rem;">• تعلم ES6+ الحديثة</li>
+        </ul>
+      </div>
+
+      <!-- HTML -->
+      <div class="glass-panel fade-in" style="margin-bottom: 3rem;" id="html">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+          <div class="card-icon" style="background: linear-gradient(135deg, #e34c26, #f06529);">H5</div>
+          <h2 style="color: var(--neon-cyan);">HTML</h2>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">📖 ما هي HTML؟</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 2;">
+          HTML (HyperText Markup Language) هي لغة توصيف النص التشعبي، وهي الأساس الذي تُبنى عليه 
+          جميع صفحات الويب. تُستخدم لتحديد هيكل ومحتوى صفحات الويب من عناوين، فقرات، صور، روابط، 
+          ونماذج. لا يمكن بناء أي موقع ويب بدون HTML.
+        </p>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">🎯 استخدامات HTML</h3>
+        <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• بناء هيكل صفحات الويب</li>
+          <li style="margin-bottom: 0.5rem;">• إنشاء النماذج والاستبيانات</li>
+          <li style="margin-bottom: 0.5rem;">• تضمين الوسائط المتعددة</li>
+          <li style="margin-bottom: 0.5rem;">• إنشاء الجداول والقوائم</li>
+          <li style="margin-bottom: 0.5rem;">• تنظيم المحتوى بشكل دلالي (Semantic)</li>
+        </ul>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💻 مثال عملي</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-dot red"></span>
+            <span class="code-dot yellow"></span>
+            <span class="code-dot green"></span>
+            <span style="margin-right: auto; color: var(--text-muted);">index.html</span>
+          </div>
+          <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ar" dir="rtl"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;صفحتي الأولى&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;مرحباً بالعالم! 🌍&lt;/h1&gt;
+  &lt;/header&gt;
+  
+  &lt;main&gt;
+    &lt;article&gt;
+      &lt;h2&gt;عن البرمجة&lt;/h2&gt;
+      &lt;p&gt;البرمجة هي فن حل المشكلات.&lt;/p&gt;
+    &lt;/article&gt;
+  &lt;/main&gt;
+  
+  &lt;footer&gt;
+    &lt;p&gt;© 2025 جميع الحقوق محفوظة&lt;/p&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💡 نصائح للتعلم</h3>
+        <ul style="color: var(--text-secondary); padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• احفظ العناصر الأساسية (tags)</li>
+          <li style="margin-bottom: 0.5rem;">• استخدم العناصر الدلالية (semantic elements)</li>
+          <li style="margin-bottom: 0.5rem;">• تعلم إمكانية الوصول (accessibility)</li>
+          <li style="margin-bottom: 0.5rem;">• مارس بناء صفحات بسيطة</li>
+        </ul>
+      </div>
+
+      <!-- CSS -->
+      <div class="glass-panel fade-in" style="margin-bottom: 3rem;" id="css">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+          <div class="card-icon" style="background: linear-gradient(135deg, #264de4, #2965f1);">CSS</div>
+          <h2 style="color: var(--neon-cyan);">CSS</h2>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">📖 ما هي CSS؟</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 2;">
+          CSS (Cascading Style Sheets) هي لغة أوراق الأنماط المتتالية، تُستخدم لتنسيق وتصميم 
+          صفحات الويب. تتحكم في الألوان، الخطوط، التخطيط، الرسوم المتحركة، وكل ما يتعلق بالمظهر 
+          البصري للموقع. تعمل جنباً إلى جنب مع HTML.
+        </p>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">🎯 استخدامات CSS</h3>
+        <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• تنسيق الألوان والخلفيات</li>
+          <li style="margin-bottom: 0.5rem;">• تصميم التخطيطات (Layouts)</li>
+          <li style="margin-bottom: 0.5rem;">• إنشاء الرسوم المتحركة</li>
+          <li style="margin-bottom: 0.5rem;">• التصميم المتجاوب (Responsive)</li>
+          <li style="margin-bottom: 0.5rem;">• تحسين تجربة المستخدم</li>
+        </ul>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💻 مثال عملي</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-dot red"></span>
+            <span class="code-dot yellow"></span>
+            <span class="code-dot green"></span>
+            <span style="margin-right: auto; color: var(--text-muted);">style.css</span>
+          </div>
+          <pre><code>/* بطاقة متحركة */
+.card {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 20px;
+  padding: 2rem;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+}
+
+/* نص متوهج */
+.glow-text {
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00d4ff,
+               0 0 20px #00d4ff;
+}</code></pre>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💡 نصائح للتعلم</h3>
+        <ul style="color: var(--text-secondary); padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• تعلم Flexbox و Grid</li>
+          <li style="margin-bottom: 0.5rem;">• احترف التصميم المتجاوب</li>
+          <li style="margin-bottom: 0.5rem;">• استخدم CSS Variables</li>
+          <li style="margin-bottom: 0.5rem;">• تعلم Animations و Transitions</li>
+        </ul>
+      </div>
+
+      <!-- Python -->
+      <div class="glass-panel fade-in" style="margin-bottom: 3rem;" id="python">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+          <div class="card-icon" style="background: linear-gradient(135deg, #3776ab, #ffd43b);">Py</div>
+          <h2 style="color: var(--neon-cyan);">Python</h2>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">📖 ما هي Python؟</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 2;">
+          Python هي لغة برمجة عالية المستوى، سهلة القراءة والكتابة. تتميز بصياغتها البسيطة 
+          التي تشبه اللغة الإنجليزية. تُستخدم في مجالات متعددة مثل الذكاء الاصطناعي، تحليل 
+          البيانات، تطوير الويب، والأتمتة. من أكثر اللغات شعبية في العالم.
+        </p>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">🎯 استخدامات Python</h3>
+        <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• الذكاء الاصطناعي وتعلم الآلة</li>
+          <li style="margin-bottom: 0.5rem;">• تحليل البيانات والإحصاء</li>
+          <li style="margin-bottom: 0.5rem;">• تطوير الويب (Django, Flask)</li>
+          <li style="margin-bottom: 0.5rem;">• أتمتة المهام المتكررة</li>
+          <li style="margin-bottom: 0.5rem;">• الحوسبة العلمية</li>
+        </ul>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💻 مثال عملي</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-dot red"></span>
+            <span class="code-dot yellow"></span>
+            <span class="code-dot green"></span>
+            <span style="margin-right: auto; color: var(--text-muted);">main.py</span>
+          </div>
+          <pre><code># تحليل بيانات بسيط
+students = [
+    {"name": "أحمد", "grade": 85},
+    {"name": "سارة", "grade": 92},
+    {"name": "محمد", "grade": 78},
+    {"name": "فاطمة", "grade": 95}
+]
+
+# حساب المتوسط
+average = sum(s["grade"] for s in students) / len(students)
+print(f"متوسط الدرجات: {average:.2f}")
+
+# أعلى درجة
+top_student = max(students, key=lambda s: s["grade"])
+print(f"الأول: {top_student['name']} ({top_student['grade']})")
+
+# النتيجة:
+# متوسط الدرجات: 87.50
+# الأول: فاطمة (95)</code></pre>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💡 نصائح للتعلم</h3>
+        <ul style="color: var(--text-secondary); padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• ابدأ بالأساسيات والمنطق البرمجي</li>
+          <li style="margin-bottom: 0.5rem;">• تعلم المكتبات الأساسية (NumPy, Pandas)</li>
+          <li style="margin-bottom: 0.5rem;">• مارس حل المشكلات</li>
+          <li style="margin-bottom: 0.5rem;">• انضم لمشاريع مفتوحة المصدر</li>
+        </ul>
+      </div>
+
+      <!-- SQL -->
+      <div class="glass-panel fade-in" style="margin-bottom: 3rem;" id="sql">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+          <div class="card-icon" style="background: linear-gradient(135deg, #00758f, #f29111);">SQL</div>
+          <h2 style="color: var(--neon-cyan);">SQL</h2>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">📖 ما هي SQL؟</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 2;">
+          SQL (Structured Query Language) هي لغة الاستعلام الهيكلية، تُستخدم للتعامل مع قواعد 
+          البيانات. تمكنك من إنشاء، قراءة، تحديث، وحذف البيانات (CRUD). ضرورية لأي مطور يتعامل 
+          مع البيانات، سواء في الويب أو تطبيقات سطح المكتب.
+        </p>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">🎯 استخدامات SQL</h3>
+        <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• إدارة قواعد البيانات</li>
+          <li style="margin-bottom: 0.5rem;">• استخراج وتحليل البيانات</li>
+          <li style="margin-bottom: 0.5rem;">• إنشاء التقارير</li>
+          <li style="margin-bottom: 0.5rem;">• تكامل التطبيقات</li>
+          <li style="margin-bottom: 0.5rem;">• تحسين أداء الاستعلامات</li>
+        </ul>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💻 مثال عملي</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-dot red"></span>
+            <span class="code-dot yellow"></span>
+            <span class="code-dot green"></span>
+            <span style="margin-right: auto; color: var(--text-muted);">query.sql</span>
+          </div>
+          <pre><code>-- إنشاء جدول المستخدمين
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(255) UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- إضافة مستخدم جديد
+INSERT INTO users (name, email) 
+VALUES ('أحمد محمد', 'ahmed@example.com');
+
+-- استعلام مع تصفية
+SELECT name, email 
+FROM users 
+WHERE created_at > '2024-01-01'
+ORDER BY name ASC;</code></pre>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💡 نصائح للتعلم</h3>
+        <ul style="color: var(--text-secondary); padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• افهم العلاقات بين الجداول</li>
+          <li style="margin-bottom: 0.5rem;">• تعلم JOINs بأنواعها</li>
+          <li style="margin-bottom: 0.5rem;">• احترف الفهرسة (Indexing)</li>
+          <li style="margin-bottom: 0.5rem;">• مارس على بيانات حقيقية</li>
+        </ul>
+      </div>
+
+      <!-- Ruby -->
+      <div class="glass-panel fade-in" id="ruby">
+        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+          <div class="card-icon" style="background: linear-gradient(135deg, #cc342d, #a91401);">Rb</div>
+          <h2 style="color: var(--neon-cyan);">Ruby</h2>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">📖 ما هي Ruby؟</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 2;">
+          Ruby هي لغة برمجة ديناميكية، مفتوحة المصدر، تركز على البساطة والإنتاجية. صُممت لتكون 
+          ممتعة في الكتابة وسهلة القراءة. اشتهرت بإطار العمل Ruby on Rails الذي يُستخدم لبناء 
+          تطبيقات الويب بسرعة وكفاءة.
+        </p>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">🎯 استخدامات Ruby</h3>
+        <ul style="color: var(--text-secondary); margin-bottom: 1.5rem; padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• تطوير تطبيقات الويب (Rails)</li>
+          <li style="margin-bottom: 0.5rem;">• كتابة السكربتات والأتمتة</li>
+          <li style="margin-bottom: 0.5rem;">• تطوير واجهات برمجية (APIs)</li>
+          <li style="margin-bottom: 0.5rem;">• أدوات DevOps</li>
+          <li style="margin-bottom: 0.5rem;">• النماذج الأولية السريعة</li>
+        </ul>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💻 مثال عملي</h3>
+        <div class="code-block">
+          <div class="code-header">
+            <span class="code-dot red"></span>
+            <span class="code-dot yellow"></span>
+            <span class="code-dot green"></span>
+            <span style="margin-right: auto; color: var(--text-muted);">app.rb</span>
+          </div>
+          <pre><code># فئة الطالب
+class Student
+  attr_accessor :name, :grade
+  
+  def initialize(name, grade)
+    @name = name
+    @grade = grade
+  end
+  
+  def passed?
+    @grade >= 60
+  end
+  
+  def to_s
+    status = passed? ? "ناجح ✓" : "راسب ✗"
+    "#{@name}: #{@grade} (#{status})"
+  end
+end
+
+# إنشاء طلاب
+students = [
+  Student.new("أحمد", 85),
+  Student.new("سارة", 55),
+  Student.new("محمد", 72)
+]
+
+# طباعة النتائج
+students.each { |s| puts s }
+# أحمد: 85 (ناجح ✓)
+# سارة: 55 (راسب ✗)
+# محمد: 72 (ناجح ✓)</code></pre>
+        </div>
+        
+        <h3 style="color: var(--neon-blue); margin-bottom: 1rem;">💡 نصائح للتعلم</h3>
+        <ul style="color: var(--text-secondary); padding-right: 1.5rem;">
+          <li style="margin-bottom: 0.5rem;">• تعلم مبادئ البرمجة الكائنية</li>
+          <li style="margin-bottom: 0.5rem;">• ابدأ بـ Ruby ثم انتقل لـ Rails</li>
+          <li style="margin-bottom: 0.5rem;">• استخدم الوثائق الرسمية</li>
+          <li style="margin-bottom: 0.5rem;">• ابنِ مشروع ويب كامل</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back Button -->
+  <button class="back-btn" aria-label="الرجوع">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l5-5m0 0l-5-5m5 5H3"/>
+    </svg>
+    <span>الرجوع إلى الوراء</span>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-scanner"></div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>أكاديمية Eleven</h3>
+        <p style="color: var(--text-secondary);">
+          منصة تعليمية متكاملة لتعلم البرمجة والتقنية من الصفر حتى الاحتراف.
+        </p>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" class="social-link" aria-label="فيسبوك">📘</a>
+          <a href="https://wa.me/" target="_blank" class="social-link" aria-label="واتساب">📱</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>روابط سريعة</h3>
+        <div class="footer-links">
+          <a href="index.html">الرئيسية</a>
+          <a href="hardware.html">الهاردوير</a>
+          <a href="courses.html">الكورسات</a>
+          <a href="questions.html">الأسئلة</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 أبو صابر (Eleven). جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

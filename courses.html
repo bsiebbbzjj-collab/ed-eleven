@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الكورسات والكتب | أكاديمية Eleven</title>
+  <meta name="description" content="دورات تعليمية وكتب إلكترونية لتعلم البرمجة">
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Orbitron:wght@400;700&family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Cyber Background -->
+  <div class="cyber-bg">
+    <div class="grid-overlay"></div>
+    <div class="particles"></div>
+    <div class="scanner-line"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav-container">
+      <a href="index.html" class="logo">ELEVEN ACADEMY</a>
+      <button class="menu-toggle" aria-label="القائمة">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+        <li><a href="programming.html" class="nav-link">لغات البرمجة</a></li>
+        <li><a href="hardware.html" class="nav-link">الهاردوير</a></li>
+        <li><a href="projects.html" class="nav-link">مشاريعي</a></li>
+        <li><a href="specializations.html" class="nav-link">تخصصاتي</a></li>
+        <li><a href="learning-paths.html" class="nav-link">مسارات التعلم</a></li>
+        <li><a href="courses.html" class="nav-link active">الكورسات</a></li>
+        <li><a href="questions.html" class="nav-link">الأسئلة</a></li>
+        <li><a href="about.html" class="nav-link">من أنا</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <section class="section">
+      <div class="section-header fade-in">
+        <h1 class="section-title">الكورسات التعليمية</h1>
+        <p class="section-subtitle">دورات تعليمية متكاملة لتطوير مهاراتك في عالم البرمجة والتقنية</p>
+      </div>
+
+      <!-- Courses Grid -->
+      <div style="display: grid; gap: 2rem;">
+        
+        <!-- Course 1: Big Data Sources - 8 videos -->
+        <div class="course-card fade-in">
+          <div class="course-header">
+            <h3 class="course-title">مصادر البيانات الضخمة</h3>
+            <p class="course-meta">8 فيديوهات تعليمية | المستوى: متوسط</p>
+          </div>
+          <div class="course-body">
+            <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.8;">
+              تعلم كيفية التعامل مع مصادر البيانات الضخمة وفهم أنواعها المختلفة وطرق جمعها وتنظيفها وتحليلها. 
+              هذا الكورس يغطي جميع الأساسيات التي تحتاجها للبدء في عالم البيانات الضخمة.
+            </p>
+            <button class="btn btn-primary course-toggle-btn" onclick="toggleCourse('bigdata')">دخول الكورس</button>
+          </div>
+          <div class="course-videos" id="videos-bigdata">
+            <div class="video-item" onclick="playVideo('bigdata', 1)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 1: مقدمة في البيانات الضخمة</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/bigdata/1.mp4</p>
+              </div>
+            </div>
+            <div class="video-item" onclick="playVideo('bigdata', 2)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 2: أنواع مصادر البيانات</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/bigdata/2.mp4</p>
+              </div>
+            </div>
+            <div class="video-item" onclick="playVideo('bigdata', 3)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 3: طرق جمع البيانات</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/bigdata/3.mp4</p>
+              </div>
+            </div>
+            <div class="video-item" onclick="playVideo('bigdata', 4)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 4: تنظيف البيانات</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/bigdata/4.mp4</p>
+              </div>
+            </div>
+            <div class="video-item" onclick="playVideo('bigdata', 5)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 5: تخزين البيانات الضخمة</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/bigdata/5.mp4</p>
+              </div>
+            </div>
+            <div class="video-item" onclick="playVideo('bigdata', 6)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 6: معالجة البيانات</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/bigdata/6.mp4</p>
+              </div>
+            </div>
+            <div class="video-item" onclick="playVideo('bigdata', 7)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 7: تحليل البيانات واستخراج المعلومات</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/bigdata/7.mp4</p>
+              </div>
+            </div>
+            <div class="video-item" onclick="playVideo('bigdata', 8)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 8: مشروع تطبيقي شامل</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/bigdata/8.mp4</p>
+              </div>
+            </div>
+            <div class="video-player-container" id="player-bigdata">
+              <video class="video-player" id="video-bigdata" controls>
+                <source src="" type="video/mp4">
+                المتصفح لا يدعم تشغيل الفيديو
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2: Data Analysis Steps - 4 videos -->
+        <div class="course-card fade-in">
+          <div class="course-header">
+            <h3 class="course-title">خطوات تحليل البيانات</h3>
+            <p class="course-meta">4 فيديوهات تعليمية | المستوى: مبتدئ</p>
+          </div>
+          <div class="course-body">
+            <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.8;">
+              تعلم الخطوات الأساسية والمنهجية لتحليل البيانات من تحديد المشكلة حتى عرض النتائج. 
+              كورس مثالي للمبتدئين في مجال تحليل البيانات.
+            </p>
+            <button class="btn btn-primary course-toggle-btn" onclick="toggleCourse('analysis')">دخول الكورس</button>
+          </div>
+          <div class="course-videos" id="videos-analysis">
+            <div class="video-item" onclick="playVideo('analysis', 1)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 1: تحديد المشكلة والأهداف</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/analysis/1.mp4</p>
+              </div>
+            </div>
+            <div class="video-item" onclick="playVideo('analysis', 2)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 2: جمع وتنظيف البيانات</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/analysis/2.mp4</p>
+              </div>
+            </div>
+            <div class="video-item" onclick="playVideo('analysis', 3)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 3: التحليل والاستكشاف</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/analysis/3.mp4</p>
+              </div>
+            </div>
+            <div class="video-item" onclick="playVideo('analysis', 4)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">الدرس 4: عرض النتائج والتقارير</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/analysis/4.mp4</p>
+              </div>
+            </div>
+            <div class="video-player-container" id="player-analysis">
+              <video class="video-player" id="video-analysis" controls>
+                <source src="" type="video/mp4">
+                المتصفح لا يدعم تشغيل الفيديو
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3: Python - 1 video -->
+        <div class="course-card fade-in">
+          <div class="course-header">
+            <h3 class="course-title">بايثون للمبتدئين</h3>
+            <p class="course-meta">فيديو تعليمي واحد | المستوى: مبتدئ</p>
+          </div>
+          <div class="course-body">
+            <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.8;">
+              مقدمة شاملة في لغة البرمجة Python للمبتدئين. تعلم أساسيات اللغة وكيفية كتابة أول برنامج لك.
+            </p>
+            <button class="btn btn-primary course-toggle-btn" onclick="toggleCourse('python')">دخول الكورس</button>
+          </div>
+          <div class="course-videos" id="videos-python">
+            <div class="video-item" onclick="playVideo('python', 1)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">مقدمة شاملة في Python</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/python/1.mp4</p>
+              </div>
+            </div>
+            <div class="video-player-container" id="player-python">
+              <video class="video-player" id="video-python" controls>
+                <source src="" type="video/mp4">
+                المتصفح لا يدعم تشغيل الفيديو
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 4: HTML - 1 video -->
+        <div class="course-card fade-in">
+          <div class="course-header">
+            <h3 class="course-title">HTML الأساسيات</h3>
+            <p class="course-meta">فيديو تعليمي واحد | المستوى: مبتدئ</p>
+          </div>
+          <div class="course-body">
+            <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.8;">
+              تعلم أساسيات HTML لبناء صفحات الويب. فهم العناصر والوسوم وكيفية هيكلة صفحات الإنترنت.
+            </p>
+            <button class="btn btn-primary course-toggle-btn" onclick="toggleCourse('html')">دخول الكورس</button>
+          </div>
+          <div class="course-videos" id="videos-html">
+            <div class="video-item" onclick="playVideo('html', 1)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">أساسيات HTML الشاملة</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/html/1.mp4</p>
+              </div>
+            </div>
+            <div class="video-player-container" id="player-html">
+              <video class="video-player" id="video-html" controls>
+                <source src="" type="video/mp4">
+                المتصفح لا يدعم تشغيل الفيديو
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 5: Hardware - 1 video -->
+        <div class="course-card fade-in">
+          <div class="course-header">
+            <h3 class="course-title">مقدمة في الهاردوير</h3>
+            <p class="course-meta">فيديو تعليمي واحد | المستوى: مبتدئ</p>
+          </div>
+          <div class="course-body">
+            <p style="color: var(--text-secondary); margin-bottom: 1rem; line-height: 1.8;">
+              تعرف على مكونات الحاسوب الداخلية وكيف تعمل معاً. فهم الفرق بين الهاردوير والسوفتوير.
+            </p>
+            <button class="btn btn-primary course-toggle-btn" onclick="toggleCourse('hardware')">دخول الكورس</button>
+          </div>
+          <div class="course-videos" id="videos-hardware">
+            <div class="video-item" onclick="playVideo('hardware', 1)">
+              <div class="video-thumbnail">▶️</div>
+              <div>
+                <h4 style="color: var(--neon-cyan);">مقدمة شاملة في الهاردوير</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">assets/videos/hardware/1.mp4</p>
+              </div>
+            </div>
+            <div class="video-player-container" id="player-hardware">
+              <video class="video-player" id="video-hardware" controls>
+                <source src="" type="video/mp4">
+                المتصفح لا يدعم تشغيل الفيديو
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Books Section -->
+      <div class="section-header fade-in" style="margin-top: 5rem;">
+        <h2 class="section-title">الكتب المرجعية</h2>
+        <p class="section-subtitle">كتب مختارة بعناية لتعميق معرفتك في مجالات البرمجة والشبكات</p>
+      </div>
+
+      <div style="display: grid; gap: 1.5rem; max-width: 900px; margin: 0 auto;">
+        <!-- Book 1 -->
+        <div class="book-card fade-in">
+          <div class="book-cover" style="background: linear-gradient(135deg, #00d4ff, #0088cc);">
+            <span style="font-size: 2.5rem;">📘</span>
+          </div>
+          <div class="book-info">
+            <h4>تعلم برمجة تطبيقات الويب</h4>
+            <p>دليل شامل ومتكامل لتعلم تطوير تطبيقات الويب من الصفر باستخدام HTML, CSS, JavaScript. يغطي الكتاب جميع الأساسيات مع أمثلة عملية ومشاريع تطبيقية.</p>
+          </div>
+        </div>
+
+        <!-- Book 2 -->
+        <div class="book-card fade-in">
+          <div class="book-cover" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">
+            <span style="font-size: 2.5rem;">🐍</span>
+          </div>
+          <div class="book-info">
+            <h4>البرمجة بلغة بايثون</h4>
+            <p>كتاب متكامل لتعلم Python من المستوى المبتدئ إلى المتقدم. يتضمن شرح مفصل للمفاهيم الأساسية والمتقدمة مع العديد من الأمثلة العملية والتمارين.</p>
+          </div>
+        </div>
+
+        <!-- Book 3 -->
+        <div class="book-card fade-in">
+          <div class="book-cover" style="background: linear-gradient(135deg, #6b7280, #374151);">
+            <span style="font-size: 2.5rem;">🎩</span>
+          </div>
+          <div class="book-info">
+            <h4>Gray Hat Python</h4>
+            <p>كتاب متقدم في استخدام Python للأمن السيبراني واختبار الاختراق. يشرح كيفية استخدام Python في تحليل البرمجيات الخبيثة وتطوير أدوات الأمان.</p>
+          </div>
+        </div>
+
+        <!-- Book 4 -->
+        <div class="book-card fade-in">
+          <div class="book-cover" style="background: linear-gradient(135deg, #10b981, #059669);">
+            <span style="font-size: 2.5rem;">🌐</span>
+          </div>
+          <div class="book-info">
+            <h4>CCNA - شهادة سيسكو للشبكات</h4>
+            <p>دليل شامل للتحضير لشهادة CCNA في الشبكات من Cisco. يغطي جميع المواضيع المطلوبة للاختبار مع تمارين عملية ومحاكاة للاختبارات.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back Button -->
+  <button class="back-btn" aria-label="الرجوع">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 17l5-5m0 0l-5-5m5 5H3"/>
+    </svg>
+    <span>الرجوع إلى الوراء</span>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-scanner"></div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>أكاديمية Eleven</h3>
+        <p style="color: var(--text-secondary);">
+          منصة تعليمية متكاملة لتعلم البرمجة والتقنية من الصفر حتى الاحتراف.
+        </p>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" class="social-link" aria-label="فيسبوك">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/" target="_blank" class="social-link" aria-label="واتساب">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>روابط سريعة</h3>
+        <div class="footer-links">
+          <a href="programming.html">لغات البرمجة</a>
+          <a href="hardware.html">الهاردوير</a>
+          <a href="courses.html">الكورسات</a>
+          <a href="questions.html">الأسئلة</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h3>صفحات أخرى</h3>
+        <div class="footer-links">
+          <a href="projects.html">مشاريعي</a>
+          <a href="specializations.html">تخصصاتي</a>
+          <a href="learning-paths.html">مسارات التعلم</a>
+          <a href="about.html">من أنا</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2025 أبو صابر (Eleven). جميع الحقوق محفوظة.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
